@@ -1,0 +1,64 @@
+.banner-styles {
+    flex: 1;
+    padding: 0 10px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .7);
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5em;
+}
+
+.percent-box {
+    height: "100px";
+    width: "50px";
+    border-radius: 50px;
+    background-color: yellow;
+
+}
+
+.rooms-container {
+
+    .title-room {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #222;
+    }
+
+    .title-room-description {
+        font-size: 16px;
+        line-height: 25px;
+        color: #222;
+        font-weight: 400;
+    }
+
+    .rating-button {
+        border-radius: 5px;
+        padding: 3px 6px;
+        margin-right: 9px;
+        background-color: #198754;
+        font-size: 12px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 25px;
+    }
+
+    .room-price-dis {
+        text-decoration: line-through;
+        font-size: 16px;
+        color: #6d787d;
+        margin-right: 8px;
+        font-weight: 400;
+    }
+
+    .dis-percentage {
+        font-size: 14px;
+        font-weight: 600;
+        color: #f5a623;
+        line-height: 25px;
+    }
+}
