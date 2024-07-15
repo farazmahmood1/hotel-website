@@ -42,7 +42,7 @@ const Index = () => {
         image4,
         image5,
         image6,
-      ];
+    ];
 
     return (
         <div>
@@ -74,7 +74,7 @@ const Index = () => {
                             <hr />
                         </Header>
                         <Content style={contentStyle}>
-                            <div className='card ms-5 mt-2' style={{ width: "300px", borderLeft: "4px solid green", borderRadius: "0px" }}>
+                            <div className='card ms-3 mt-2' style={{ width: "300px", borderLeft: "4px solid green", borderRadius: "0px" }}>
                                 <div className='card-body'>
                                     <div style={{ display: "flex", alignItems: "center" }}>
                                         <div className='percent-box'>
@@ -88,14 +88,17 @@ const Index = () => {
                             </div>
                             <div className='rooms-container'>
                                 <div className='container'>
-                                    <div className='row'>
+                                    <div className='row mt-4 mb-3'>
                                         <div className='col-lg-5'>
 
                                             <PhotoProvider>
                                                 <div className="foo">
-                                                    {images.map((item, index) => (
-                                                        <PhotoView key={index} src={item}>
-                                                            <img src={item} alt="" />
+                                                    <PhotoView src={images[0]}>
+                                                        <img src={images[0]} alt="" />
+                                                    </PhotoView>
+                                                    {images.slice(1).map((item, index) => (
+                                                        <PhotoView key={index + 1} src={item}>
+                                                            <img src={item} alt="" style={{ display: 'none' }} />
                                                         </PhotoView>
                                                     ))}
                                                 </div>
@@ -146,6 +149,68 @@ const Index = () => {
 
                                         </div>
                                     </div>
+                                    <div className='row mt-4 mb-3'>
+                                        <div className='col-lg-5'>
+
+                                            <PhotoProvider>
+                                                <div className="foo">
+                                                    <PhotoView src={images[1]}>
+                                                        <img src={images[1]} alt="" />
+                                                    </PhotoView>
+                                                    {images.slice(1).map((item, index) => (
+                                                        <PhotoView key={index + 1} src={item}>
+                                                            <img src={item} alt="" style={{ display: 'none' }} />
+                                                        </PhotoView>
+                                                    ))}
+                                                </div>
+                                            </PhotoProvider>
+
+                                        </div>
+                                        <div className='col-lg-7'>
+                                            <p className='title-room'>Hotel Baverly Inn</p>
+                                            <p className='title-room-description'>
+                                                Near Airport Road, Lahore Cantt.&nbsp; <i className="fa-solid text-danger fa-location-dot" />&nbsp;44Km
+                                            </p>
+
+                                            <div className='d-flex align-items-center mt-3'>
+                                                <p className='rating-button' >4.6 &nbsp; <i className="fa-solid fa-star" /></p>
+                                                <p>(233) Ratings <i className="fa-solid fa-certificate text-secondary" /> Excellent</p>
+                                            </div>
+                                            <div className='d-flex align-items-center mt-2'>
+                                                <div className='d-flex align-items-center me-3'>
+                                                    <i className="fa-solid fs-5 fa-elevator" />
+                                                    <p className=' fs-5'>&nbsp;Elevator</p>
+                                                </div>
+                                                <div className='d-flex align-items-center me-3'>
+                                                    <i className="fa-solid fa-bell-concierge" />
+                                                    <p className=' fs-5'>&nbsp;Receptionist</p>
+                                                </div>
+                                                <div className='d-flex align-items-center me-3'>
+                                                    <i className="fa-solid fs-5 fa-wifi" />
+                                                    <p className=' fs-5'>&nbsp;Free Wifi</p>
+                                                </div>
+                                                <div className='d-flex align-items-center me-3'>
+                                                    <p className=' fs-5'>+8 More</p>
+                                                </div>
+                                            </div>
+
+
+                                            <div className='mt-5'>
+                                                <div className='row'>
+                                                    <div className='col-lg-6'>
+                                                        <p className='title-room '>3500 Pkr <span className='room-price-dis'>4000 Pkr</span> <span className='dis-percentage'>25% off</span></p>
+                                                        <p>+ 129 Pkr taxes & fees · per room per night</p>
+                                                    </div>
+                                                    <div className='col-lg-6'>
+                                                        <button className='btn btn-outline-secondary'>View Details</button>
+                                                        &nbsp;<button className='btn btn-success'>Book Now</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </Content>
