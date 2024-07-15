@@ -1,18 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
     <div>
       <div className='row'>
         <div className="col-lg-10 mx-auto">
-          <h2 className='text-center mt-5 mb-3 '>Over 174,000+ hotels and homes across 35+ countries</h2>
+          <h2 className='text-center mt-5 mb-3 '>Over 4,000+ hotels and homes across 35+ countries</h2>
           <div className='card'>
             <div className='card-body'>
               <div className='d-flex'>
                 <input type="text" placeholder='Search a place, or location' className='form-control' style={{border:"none"}} />
                 <input type="text"  placeholder='Sun, July 22, 2024' defaultValue={"2 July, 2024 - 4 July, 2024"} style={{border:"none"}} className='form-control' />
                 <input type="text" className='form-control' defaultValue={"1 Room 2 Guests"} style={{border:"none"}}/>
-                <button className='btn btn-success'>Search</button>
+                <Link to='/SearchRooms' className='btn btn-success'>Search</Link>
               </div>
             </div>
           </div>

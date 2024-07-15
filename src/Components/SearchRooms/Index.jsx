@@ -1,6 +1,17 @@
 import React from 'react';
-import './SearchRoomStyles.scss'
+import './SearchRoomStyles.scss';
+import 'react-photo-view/dist/react-photo-view.css';
+
 import { Flex, Layout } from 'antd';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+
+import image1 from '../SourceFiles/property-01.jpg';
+import image2 from '../SourceFiles/property-02.jpg';
+import image3 from '../SourceFiles/property-03.jpg';
+import image4 from '../SourceFiles/property-04.jpg';
+import image5 from '../SourceFiles/property-05.jpg';
+import image6 from '../SourceFiles/property-06.jpg';
+
 const { Header, Sider, Content } = Layout;
 
 const Index = () => {
@@ -23,6 +34,15 @@ const Index = () => {
     const layoutStyle = {
         overflow: 'hidden',
     };
+
+    const images = [
+        image1,
+        image2,
+        image3,
+        image4,
+        image5,
+        image6,
+      ];
 
     return (
         <div>
@@ -70,6 +90,16 @@ const Index = () => {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='col-lg-5'>
+
+                                            <PhotoProvider>
+                                                <div className="foo">
+                                                    {images.map((item, index) => (
+                                                        <PhotoView key={index} src={item}>
+                                                            <img src={item} alt="" />
+                                                        </PhotoView>
+                                                    ))}
+                                                </div>
+                                            </PhotoProvider>
 
                                         </div>
                                         <div className='col-lg-7'>
