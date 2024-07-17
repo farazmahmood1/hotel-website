@@ -62,3 +62,25 @@
         line-height: 25px;
     }
 }
+
+.ant-menu-submenu-title {
+    color: #f35525;
+
+    .ant-menu-title-content {
+        color: #7A7A7A;
+    }
+
+    .ant-menu-submenu-title {
+        color: #7A7A7A;
+    }
+}
+
+
+.ant-menu .ant-menu-item-selected{
+    color: #000;
+    background-color: #f35525;
+}
+
+.ant-layout-sider-trigger{
+    background-color: #7A7A7A;
+}

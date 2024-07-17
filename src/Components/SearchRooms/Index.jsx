@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './SearchRoomStyles.scss';
 import 'react-photo-view/dist/react-photo-view.css';
 
@@ -6,7 +6,7 @@ import { Flex } from 'antd';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 
-import { UserOutlined, ShopOutlined  } from '@ant-design/icons';
+import { UserOutlined, HomeOutlined } from '@ant-design/icons';
 
 import image1 from '../SourceFiles/property-01.jpg';
 import image2 from '../SourceFiles/property-02.jpg';
@@ -18,6 +18,8 @@ import image6 from '../SourceFiles/property-06.jpg';
 const { Header, Sider, Content } = Layout;
 
 const Index = () => {
+
+    const [collapsed, setCollapsed] = useState(false);
 
     const headerStyle = {
         backgroundColor: '#fff',
@@ -50,19 +52,13 @@ const Index = () => {
     const items2 = [
         {
             key: "sub1",
-            icon: <UserOutlined/>,
-            label: "subnav 1",
-            "children": [
-                { key: 1, label: "option1" },
-                { key: 2, label: "option2" },
-                { key: 3, label: "option3" },
-                { key: 4, label: "option4" }
-            ]
+            icon: <HomeOutlined/>,
+            label: "Hertiage Sarayee",
         },
         {
             key: "sub2",
-            icon: <UserOutlined/>,
-            label: "subnav 2",
+            icon: <HomeOutlined/>,
+            label: "Family Sarayee",
             "children": [
                 { key: 5, label: "option5" },
                 { key: 6, label: "option6" },
@@ -72,8 +68,8 @@ const Index = () => {
         },
         {
             key: "sub3",
-            icon: <UserOutlined/>,
-            label: "subnav 3",
+            icon: <HomeOutlined/>,
+            label: "Welcome Guests",
             "children": [
                 { key: 9, label: "option9" },
                 { key: 10, label: "option10" },
@@ -89,7 +85,7 @@ const Index = () => {
             <Flex gap="middle" wrap>
 
                 <Layout style={layoutStyle}>
-                    <Sider width="25%" style={siderStyle}>
+                    <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)} width={250} style={siderStyle}>
 
                         <Menu
                             mode="inline"
