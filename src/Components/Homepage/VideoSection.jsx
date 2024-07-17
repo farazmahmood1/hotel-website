@@ -27,7 +27,7 @@ const VideoSection = () => {
       </div>
     </div>
   </div>
-  <div className="fun-facts">
+  {/* <div className="fun-facts">
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
@@ -56,7 +56,7 @@ const VideoSection = () => {
         </div>
       </div>
     </div>
-  </div>
+  </div> */}
     </div>
   )
 }

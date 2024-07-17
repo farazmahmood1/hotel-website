@@ -15,7 +15,7 @@ const BestDeal = () => {
         <div className="col-lg-12">
           <div className="tabs-content">
             <div className="row">
-              <div className="nav-wrapper ">
+              {/* <div className="nav-wrapper ">
                 <ul className="nav nav-tabs" role="tablist">
                   <li className="nav-item" role="presentation">
                     <button className="nav-link active" id="appartment-tab" data-bs-toggle="tab" data-bs-target="#appartment" type="button" role="tab" aria-controls="appartment" aria-selected="true">Appartment</button>
@@ -24,7 +24,7 @@ const BestDeal = () => {
                     <button className="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa" type="button" role="tab" aria-controls="villa" aria-selected="false">Rooms</button>
                   </li>
                 </ul>
-              </div>              
+              </div>*/}
               <div className="tab-content" id="myTabContent">
                 <div className="tab-pane fade show active" id="appartment" role="tabpanel" aria-labelledby="appartment-tab">
                   <div className="row">
