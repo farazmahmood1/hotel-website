@@ -34,10 +34,10 @@ const Index = () => {
                 </a>
 
                 <ul className="nav">
-                  <li><a href="index.html" className="active">Home</a></li>
-                  <li><a href="properties.html">Properties</a></li>
-                  <li><a href="property-details.html">Property Details</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><Link to='/' className="active">Home</Link></li>
+                  <li><Link to="/SearchRooms">Properties</Link></li>
+                  <li><a >Property Details</a></li>
+                  <li><a >Contact Us</a></li>
                   <li><a href="#"><i className="fa fa-calendar" /> Schedule a visit</a></li>
                 </ul>
                 <a className="menu-trigger">

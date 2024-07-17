@@ -2,8 +2,11 @@ import React from 'react';
 import './SearchRoomStyles.scss';
 import 'react-photo-view/dist/react-photo-view.css';
 
-import { Flex, Layout } from 'antd';
+import { Flex } from 'antd';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Breadcrumb, Layout, Menu, theme } from 'antd';
+
+import { UserOutlined, ShopOutlined  } from '@ant-design/icons';
 
 import image1 from '../SourceFiles/property-01.jpg';
 import image2 from '../SourceFiles/property-02.jpg';
@@ -44,13 +47,58 @@ const Index = () => {
         image6,
     ];
 
+    const items2 = [
+        {
+            key: "sub1",
+            icon: <UserOutlined/>,
+            label: "subnav 1",
+            "children": [
+                { key: 1, label: "option1" },
+                { key: 2, label: "option2" },
+                { key: 3, label: "option3" },
+                { key: 4, label: "option4" }
+            ]
+        },
+        {
+            key: "sub2",
+            icon: <UserOutlined/>,
+            label: "subnav 2",
+            "children": [
+                { key: 5, label: "option5" },
+                { key: 6, label: "option6" },
+                { key: 7, label: "option7" },
+                { key: 8, label: "option8" }
+            ]
+        },
+        {
+            key: "sub3",
+            icon: <UserOutlined/>,
+            label: "subnav 3",
+            "children": [
+                { key: 9, label: "option9" },
+                { key: 10, label: "option10" },
+                { key: 11, label: "option11" },
+                { key: 12, label: "option12" }
+            ]
+        }
+    ]
+
+
     return (
         <div>
             <Flex gap="middle" wrap>
 
                 <Layout style={layoutStyle}>
                     <Sider width="25%" style={siderStyle}>
-                        Sider
+
+                        <Menu
+                            mode="inline"
+                            defaultSelectedKeys={['1']}
+                            defaultOpenKeys={['sub1']}
+                            style={{ height: '100%' }}
+                            items={items2}
+                        />
+
                     </Sider>
                     <Layout>
                         <Header style={headerStyle}>
@@ -137,7 +185,7 @@ const Index = () => {
                                             <div className='mt-5'>
                                                 <div className='row'>
                                                     <div className='col-lg-6'>
-                                                        <p className='title-room '>3500 Pkr <span className='room-price-dis'>4000 Pkr</span> <span className='dis-percentage'>25% off</span></p>
+                                                        <p className='title-room '>3500 pkr <span className='room-price-dis'>4000 Pkr</span> <span className='dis-percentage'>25% off</span></p>
                                                         <p>+ 129 Pkr taxes & fees · per room per night</p>
                                                     </div>
                                                     <div className='col-lg-6'>
@@ -198,7 +246,7 @@ const Index = () => {
                                             <div className='mt-5'>
                                                 <div className='row'>
                                                     <div className='col-lg-6'>
-                                                        <p className='title-room '>3500 Pkr <span className='room-price-dis'>4000 Pkr</span> <span className='dis-percentage'>25% off</span></p>
+                                                        <p className='title-room '>3500 pkr <span className='room-price-dis'>4000 Pkr</span> <span className='dis-percentage'>25% off</span></p>
                                                         <p>+ 129 Pkr taxes & fees · per room per night</p>
                                                     </div>
                                                     <div className='col-lg-6'>
