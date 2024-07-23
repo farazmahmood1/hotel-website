@@ -1,11 +1,49 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { DatePicker, Space } from 'antd';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+dayjs.extend(customParseFormat);
+const { RangePicker } = DatePicker;
+const range = (start, end) => {
+  const result = [];
+  for (let i = start; i < end; i++) {
+    result.push(i);
+  }
+  return result;
+};
 
+// eslint-disable-next-line arrow-body-style
+const disabledDate = (current) => {
+  // Can not select days before today and today
+  return current && current < dayjs().endOf('day');
+};
+const disabledDateTime = () => ({
+  disabledHours: () => range(0, 24).splice(4, 20),
+  disabledMinutes: () => range(30, 60),
+  disabledSeconds: () => [55, 56],
+});
+const disabledRangeTime = (_, type) => {
+  if (type === 'start') {
+    return {
+      disabledHours: () => range(0, 60).splice(4, 20),
+      disabledMinutes: () => range(30, 60),
+      disabledSeconds: () => [55, 56],
+    };
+  }
+  return {
+    disabledHours: () => range(0, 60).splice(20, 4),
+    disabledMinutes: () => range(0, 31),
+    disabledSeconds: () => [55, 56],
+  };
+};
 
 const About = () => {
 
   const { RangePicker } = DatePicker;
+
+
+  
 
   return (
     <div>
@@ -19,15 +57,22 @@ const About = () => {
                 <input type="text" placeholder='Search a place, or location' className='form-control' style={{border:"none"}} />
 
                 </div>
-                <div className="col-lg-3">
-                <RangePicker showTime styles={{border:"none"}} />
-
+                <div className="col-lg-5">
+                <RangePicker
+      disabledDate={disabledDate}
+      disabledTime={disabledRangeTime}
+      showTime={{
+        hideDisabledOptions: true,
+        defaultValue: [dayjs('00:00', 'HH:mm'), dayjs('11:59', 'HH:mm')],
+      }}
+      format="YYYY-MM-DD HH:mm"
+    />
                 </div>
                 <div className="col-lg-3">
                 <input type="text" className='form-control' defaultValue={"1 Room 2 Guests"} style={{border:"none"}}/>
 
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-1">
                 <Link to='/SearchRooms' className='btn btn-success mx-auto'>Search</Link>
 
                 </div>
