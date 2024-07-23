@@ -59,6 +59,7 @@ const About = () => {
                 </div>
                 <div className="col-lg-5">
                 <RangePicker
+                className='custom-range-picker mt-1'
       disabledDate={disabledDate}
       disabledTime={disabledRangeTime}
       showTime={{
