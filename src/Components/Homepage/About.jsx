@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { DatePicker, Space } from 'antd';
+
 
 const About = () => {
+
+  const { RangePicker } = DatePicker;
+
   return (
     <div>
       <div className='row'>
@@ -9,11 +14,23 @@ const About = () => {
           <h2 className='text-center mt-5 mb-3 '>Over 4,000+ hotels and homes across 35+ countries</h2>
           <div className='card'>
             <div className='card-body'>
-              <div className='d-flex'>
+              <div className='row'>
+                <div className="col-lg-3">
                 <input type="text" placeholder='Search a place, or location' className='form-control' style={{border:"none"}} />
-                <input type="text"  placeholder='Sun, July 22, 2024' defaultValue={"2 July, 2024 - 4 July, 2024"} style={{border:"none"}} className='form-control' />
+
+                </div>
+                <div className="col-lg-3">
+                <RangePicker showTime styles={{border:"none"}} />
+
+                </div>
+                <div className="col-lg-3">
                 <input type="text" className='form-control' defaultValue={"1 Room 2 Guests"} style={{border:"none"}}/>
-                <Link to='/SearchRooms' className='btn btn-success'>Search</Link>
+
+                </div>
+                <div className="col-lg-3">
+                <Link to='/SearchRooms' className='btn btn-success mx-auto'>Search</Link>
+
+                </div>
               </div>
             </div>
           </div>
