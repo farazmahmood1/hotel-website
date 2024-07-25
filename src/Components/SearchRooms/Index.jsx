@@ -14,6 +14,7 @@ import image3 from '../SourceFiles/property-03.jpg';
 import image4 from '../SourceFiles/property-04.jpg';
 import image5 from '../SourceFiles/property-05.jpg';
 import image6 from '../SourceFiles/property-06.jpg';
+import { Link } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
 // dfsaf
@@ -186,8 +187,8 @@ const Index = () => {
                                                         <p>+ 129 Pkr taxes & fees · per room per night</p>
                                                     </div>
                                                     <div className='col-lg-6'>
-                                                        <button className='btn btn-outline-secondary'>View Details</button>
-                                                        &nbsp;<button className='btn btn-success'>Book Now</button>
+                                                        <Link to="/RoomInfo" className='btn btn-outline-secondary'>View Details</Link>
+                                                        &nbsp;<Link to="/RoomInfo" className='btn btn-success'>Book Now</Link>
                                                     </div>
                                                 </div>
                                             </div>
