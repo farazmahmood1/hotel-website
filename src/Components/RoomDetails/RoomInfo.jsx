@@ -77,12 +77,12 @@ const RoomInfo = () => {
             <p>OYO 4038 Hotel Winner Inn is a budget hotel, located 3 km from Sri Harmandir Sahib and 4 km from Jallianwala Bagh. The hotel offers amenities such as in-house restaurant and kitchen, with a main road property.</p>
             <p className='text-heading2' style={{ margin: "27px 0px" }}>Read More</p>
             <p className='text-heading' style={{ margin: "27px 0px" }}>Choose your room</p>
-<div className='card'>
-<div className="card-header" style={{background:"linear-gradient(to right, #797f9d, #d4d1da)", fontSize:"14px", color:"#fff", fontWeight:600}}>
-  <i className='fa fa-solid fa-start text-primary'/> Select Category
-</div>
-<h4>fdshaajk</h4>
-</div>
+            <div className='card'>
+              <div className="card-header" style={{ background: "linear-gradient(to right, #797f9d, #d4d1da)", fontSize: "14px", color: "#fff", fontWeight: 600 }}>
+                <i className='fa fa-solid fa-start text-primary' /> Select Category
+              </div>
+              <h4>fdshaajk</h4>
+            </div>
           </div>
         </div>
       </div>
