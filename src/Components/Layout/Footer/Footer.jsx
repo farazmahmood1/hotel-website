@@ -147,7 +147,7 @@ const Footer = () => {
                 {/* Copyright */}
                 <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                     © 2020 Copyright:
-                    <a className="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                    <a className="text-white fw-bold" href="https://mdbootstrap.com/">saraye.com</a>
                 </div>
                 {/* Copyright */}
             </footer>
