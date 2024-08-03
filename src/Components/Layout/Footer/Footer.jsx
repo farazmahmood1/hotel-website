@@ -145,9 +145,9 @@ const Footer = () => {
                 </div>
                 {/* Grid container */}
                 {/* Copyright */}
-                <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+                <div className="text-center text-white p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                     © 2020 Copyright:
-                    <a className="text-white fw-bold" href="https://mdbootstrap.com/">saraye.com</a>
+                    &nbsp;<a className="text-white fw-bold" href="https://mdbootstrap.com/">saraye.com</a>
                 </div>
                 {/* Copyright */}
             </footer>
