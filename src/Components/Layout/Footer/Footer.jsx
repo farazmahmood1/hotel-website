@@ -6,7 +6,7 @@ const Footer = () => {
             {/* Footer */}
             <footer className=" text-center">
                 {/* Grid container */}
-                <div className="container p-4">
+                <div className="container">
                     {/* Section: Social media */}
                     <section className="mb-4">
                         {/* Facebook */}
@@ -57,10 +57,9 @@ const Footer = () => {
                     </section>
                     {/* Section: Form */}
                     {/* Section: Text */}
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nam nisi quae necessitatibus! Natus quisquam repellendus ea expedita, qui sunt?</p>
-                    {/* Section: Text */}
-                    {/* Section: Links */}
-                    <section className>
+                  <p>Lorem ipsum dolor sit amet consectetur Ratione nam nisi quae necessitatibus! Natus quisquam repellendus ea expedita, qui sunt?</p>
+              
+                    <section >
                         {/*Grid row*/}
                         <div className="row">
                             {/*Grid column*/}
