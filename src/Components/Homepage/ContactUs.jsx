@@ -65,7 +65,7 @@ const ContactUs = () => {
                 </fieldset>
               </div>
               <div className="col-lg-12">
-                <fieldset>
+                <fieldset className='d-flex justify-content-center align-items-center'>
                   <button type="submit" id="form-submit" className="orange-button">Send Message</button>
                 </fieldset>
               </div>

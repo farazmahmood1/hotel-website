@@ -8,8 +8,8 @@ const Index = () => {
           <div className="row">
             <div className="col-lg-8 col-md-8">
               <ul className="info">
-                <li><i className="fa fa-envelope" /> info@sarayee.co</li>
-                <li><i className="fa fa-map" /> 255-C Al Hafeez Heights</li>
+                <li><i className="fa fa-envelope" /> info@saraye.co</li>
+                <li><i className="fa fa-map" />516 HighQ Tower, Jail Road</li>
               </ul>
             </div>
             <div className="col-lg-4 col-md-4">
@@ -30,13 +30,13 @@ const Index = () => {
             <div className="col-12">
               <nav className="main-nav">
                 <a className="logo">
-                  <h1>Sarayee</h1>
+                  <h1>Saraye</h1>
                 </a>
 
                 <ul className="nav">
                   <li><Link to='/' className="active">Home</Link></li>
-                  <li><Link to="/SearchRooms">Properties</Link></li>
-                  <li><a >Property Details</a></li>
+                  <li><Link to="/SearchRooms">About Us</Link></li>
+                  <li><a >Rooms</a></li>
                   <li><a >Contact Us</a></li>
                   <li><a href="#"><i className="fa fa-calendar" /> Schedule a visit</a></li>
                 </ul>

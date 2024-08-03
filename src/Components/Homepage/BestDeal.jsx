@@ -7,7 +7,7 @@ const BestDeal = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="section-heading">
+              <div className="section-heading text-center">
                 <h6>| Best Deal</h6>
                 <h2>Find Your Best Deal Right Now!</h2>
               </div>
