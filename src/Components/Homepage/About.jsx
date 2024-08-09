@@ -92,7 +92,7 @@ const About = () => {
       </div>
 
 
-      <div className="featured section">
+      {/* <div className="featured section">
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
@@ -168,7 +168,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
